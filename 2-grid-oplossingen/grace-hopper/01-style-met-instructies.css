@@ -1,0 +1,90 @@
+/* universal border-box */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* best for images */
+img {
+  /* Niet als in-line block */
+  display: block;
+  /* maximale breedte tot 80%. */
+  max-width: 80%;
+  /* Centreer mooi in het midden van de beschikbare ruimte. */
+  margin: 0px auto;
+  /* Geef een beetje marge, behalve links. */
+  padding: 0.5em 0.5em 0.5em 0em;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  color: #d3d3d3;
+  background-color: #1b1b1b;
+  /* Voorzie een kleine ruimte links en rechts voor een maximale breedte van 750px. */
+  max-width: 750px;
+  /* Centreer mooi in het midden van de beschikbare ruimte. */
+  margin: 0 auto;
+}
+
+a {
+  color: #d4af37;
+  /* Geen onderlijning van de linken. */
+  text-decoration: none;
+}
+
+a:hover {
+  /* Wel onderlijning van de linken bij het hoveren. */
+  text-decoration: underline;
+}
+
+header {
+  background-color: #3a3a3a;
+  /* Centreer de header. */
+  text-align: center;
+  padding: 10px;
+  font-family: "Orbitron", sans-serif;
+  /* Voorzie een rand met kleur #d4af37.  */
+  border: 2px solid #d4af37;
+}
+
+nav,
+aside {
+  background-color: #252525;
+  /* Voorzie overal een klein beetje padding voor de linken. */
+  padding: 10px;
+  /* Voorzie een rand met kleur #c0c0c0.  */
+  border: 2px solid #c0c0c0;
+}
+
+nav ul {
+  /* Geen bullets voor de lijst items. */
+  list-style-type: none;
+  /* Voorzie ook wat marge boven en onderaan. */
+  margin: 1em 0;
+}
+
+main {
+  /* Voorzie een rand met kleur #c0c0c0.  */
+  border: 2px solid #c0c0c0;
+   /* Voor zie een klein beetje padding links en rechts. */
+   padding: 0 0.5em;
+}
+figure {
+  /* Voor zie een klein beetje padding boven en onder de img. */
+  margin: 1em 0;
+}
+
+footer {
+  /* aligneer de footer aan de rechterzijde */
+  text-align: right;
+  /* Voeg overal wat padding toe */
+  padding: 10px;
+  color: #c0c0c0;
+}
+.hideTitle {
+  display: none;
+}

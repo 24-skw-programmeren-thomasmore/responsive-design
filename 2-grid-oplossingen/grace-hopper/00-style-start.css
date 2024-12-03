@@ -1,0 +1,83 @@
+/* universal border-box */
+
+/* best for images */
+img {
+  /* Niet als in-line block */
+
+  /* maximale breedte tot 80% */
+
+  /* Centreer mooi in het midden van de beschikbare ruimte. */
+
+  /* Geef een beetje marge, behalve links*/
+
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  color: #d3d3d3;
+  background-color: #1b1b1b;
+  /* Voorzie een kleine ruimte links en rechts voor een maximale breedte van 750px. */
+
+  /* Centreer mooi in het midden van de beschikbare ruimte. */
+
+}
+
+a {
+  color: #d4af37;
+  /* Geen onderlijning van de linken. */
+
+}
+
+a:hover {
+  /* Wel onderlijning van de linken bij het hoveren. */
+
+}
+
+header {
+  background-color: #3a3a3a;
+  /* Centreer de header. */
+
+  padding: 10px;
+  font-family: "Orbitron", sans-serif;
+  /* Voorzie een rand met kleur #d4af37.  */
+
+}
+
+nav,
+aside {
+  background-color: #252525;
+  /* Voorzie overal een klein beetje padding voor de linken. */
+
+  /* Voorzie een rand met kleur #c0c0c0.  */
+
+}
+
+nav ul {
+    /* Geen bullets voor de lijst items. */
+
+    /* Voorzie ook wat marge boven en onderaan. */
+
+}
+
+main {
+  /* Voorzie een rand met kleur #c0c0c0.  */
+
+  /* Voor zie een klein beetje padding links en rechts. */
+
+}
+figure {
+  /* Voor zie een klein beetje padding boven en onder de img. */
+
+}
+
+footer {
+    /* aligneer de footer aan de rechterzijde */
+
+    /* Voeg overal wat padding toe */
+
+    color: #c0c0c0;
+}
+.hideTitle {
+    /* Laat de titel van de navigatie NIET zien. */
+
+}
