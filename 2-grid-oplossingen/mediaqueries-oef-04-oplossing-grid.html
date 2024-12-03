@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Vertical navbar</title>
+    <style>
+      /* universal border-box per https://css-tricks.com/box-sizing/ */
+      html {
+        box-sizing: border-box;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      /* font */
+      html {
+        font-size: 1.2em; /* beetje groter is wat moderner */
+      }
+
+      /* default styling */
+      body {
+        margin: 0;
+        background-color: #555;
+        color: white;
+        border-radius: 10px;
+      }
+
+      main {
+        max-width: 45rem;
+        margin: 2rem auto;
+      }
+
+      /* navbar styling */
+      .navbar {
+        background-color: #333;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        justify-items: right;
+      }
+
+      .navbar .logo {
+        display: block;
+        float: left;
+      }
+
+      .navbar ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        /* display: none; */
+        grid-template-rows: repeat(3, auto);
+
+        /* Zorgt ervoor dat de volgorde wordt aangepast */
+        grid-auto-flow: row dense;
+      }
+
+      .navbar li,
+      .navbar .logo {
+        padding: 1rem;
+        min-width: 5.2rem; /* this is trial and error to have a consistent width for the active class */
+      }
+
+      .navbar a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .nav-icon {
+        float: right;
+        padding: 1rem;
+      }
+
+      .navbar .active {
+        background-color: #4caf50;
+      }
+
+      /* mobile view */
+      .toggle {
+        display: none;
+        position: absolute; /* over the page content instead of pushing it downwards */
+        top: 3.15rem; /* underneath the logo instead of on top of it */
+        width: 100%; /* full width menu */
+        text-align: right;
+        background-color: #333; /* background color for the toggle block */
+      }
+
+      @media screen and (min-width: 760px) {
+        .nav-icon {
+          display: none;
+        }
+        .toggle {
+          display: grid;
+          position: static;
+          grid-template-columns: repeat(3, auto);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Navigation Menu -->
+    <nav class="navbar clearfix">
+      <a class="active logo" href="#home">Logo</a>
+      <ul class="toggle" id="myLinks">
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <a
+        href="javascript:void(0);"
+        class="nav-icon"
+        onclick="toggle('myLinks')"
+      >
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+
+    <main>
+      <h3>Vertical Mobile Navbar</h3>
+      <p>
+        This example demonstrates what a navigation menu on a mobile/smart phone
+        could look like.
+      </p>
+      <p>
+        Click on the hamburger icon (three bars) in the top right corner, to
+        toggle the menu.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fugit ex
+        vitae nobis quae, nihil suscipit officia sed ab earum quos consequatur
+        repellat maxime est rem assumenda eos illum eaque?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+        commodi illo temporibus ipsa, ipsam libero inventore! Iure ex ab, saepe
+        in molestiae dolore cupiditate debitis sit quis culpa tenetur
+        exercitationem!
+      </p>
+      <p>
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+          voluptas voluptate aut consequatur tempora doloribus adipisci nam,
+          dicta facere vero illum quam velit libero, neque animi ex fugiat qui
+          magnam?</span
+        ><span
+          >Cum libero non ea maiores quaerat atque obcaecati, nam vitae expedita
+          corporis aut repellat animi eaque cumque quos in voluptate architecto
+          pariatur velit dolor dolores. Iure dolorum consequuntur at
+          nulla!</span
+        ><span
+          >Earum minima, quo corporis dolore labore ipsam quos tenetur
+          quibusdam! Commodi nemo corrupti fugiat at accusamus est deleniti
+          eligendi optio dignissimos voluptate ex aspernatur, distinctio aut a
+          delectus animi earum!</span
+        ><span
+          >Consectetur, dolorem ipsam deleniti veniam, dicta maxime placeat qui
+          architecto, quas possimus ad vero et molestiae similique labore illo
+          minus nostrum assumenda enim sapiente necessitatibus debitis. Atque
+          officiis distinctio maiores.</span
+        ><span
+          >Dolores, aliquid atque harum nemo laboriosam quaerat ipsa optio rem
+          culpa, repellendus cum. Modi, sunt animi vitae facilis ducimus magnam!
+          Cum rem laboriosam cupiditate aliquid vero repellat ipsa atque
+          architecto.</span
+        >
+      </p>
+    </main>
+
+    <script>
+      // This script toggles the visibility of the element with the id el
+      // put this in the onclick property of a link or button.
+      function toggle(el) {
+        var hide = document.getElementById(el);
+        if (hide.style.display === "grid") {
+          hide.style.display = "none";
+        } else {
+          hide.style.display = "grid";
+        }
+      }
+    </script>
+  </body>
+</html>
